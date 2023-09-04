@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFET ERP</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Define global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Create a header section */
+        header {
+            background-color: #031242;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Style the slider section */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        /* Style the main content section */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Style the slider section */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        /* Style the main content section */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Style the slider section */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        /* Style the links section */
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .links li {
+            margin: 20px 0;
+            background-color: #fff;
+            border: 1px solid #031242;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .links li:nth-child(even) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .links li:nth-child(odd) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .links li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .links img {
+            max-width: 1000px;
+            height: auto;
+            display: block;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            background-color: #031242;
+        }
+
+        .links .description {
+            padding: 50px;
+        }
+
+        /* Create a footer section */
+        footer {
+            background-color: #031242;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/head04.jpg" alt="College ERP Logo" style="max-width: 100%;">
+    </header>
+
+    <div class="slider">
+        <img src="images/image03.jpg" alt="Image 1">
+        <img src="images/image01.jpg" alt="Image 2">
+
+    </div>
+    <marquee style="margin-top:15px; padding:8px; background-color:#ff4200;">
+					
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/;">&nbsp; <a href="http://results.ifet.ac.in/" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG/PG - Nov/Dec 2022 - End Semester Examinations Results (First Semester)</a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="http://results.ifet.ac.in/" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG/PG - April/May 2023 - End Semester Examinations Results (Terminal Semester)</a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/timetable/Time Table 2023 - UG (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG - April/May - 2023 - Examination Time Table - (First Year Regular &amp; Arrear) R2019 </a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/Coe/Time Table 2023 - ME (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">PG - April/May – 2023 - M.E./M.Tech.  Degree Examination Time Table – . R2019</a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/Coe/Time Table 2023 - MBA (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">PG - April/May – 2023 - MBA. Degree Examination Time Table –R2019</a></span>
+        </div>
+                        <!--<div style="float:left;margin-right:30px;">
+        <span><img src="images/new.gif" style="float:left;"/>&nbsp; <a style="color:#031242;font-size:16px;font-weight:600;">Admission Open For The Batch 2019-2020.</a></span>
+        </div>-->
+        </marquee>
+
+    <div class="container">
+        <h2>Quick Links</h2>
+        <div class="links">
+            <ul>
+                <li>
+                    <img src="images/student_portal.jfif" alt="Link 1 Image">
+                    <div class="description">
+                        <p>You can access,</p>
+                        <p> -> Pay/view Fees</p>
+                        <p>You can access,</p>
+                        <p>You can access,</p>
+                    </div>
+                    
+                    <a href="https://ssolive.myclassboard.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DDIL4KLQ05IV1JZOXCLM0%26redirect_uri%3Dhttps%253A%252F%252Ficici.myclassboard.com%252Fsso%252FCallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520offline_access" >Student Portal</a>
+                </li>
+                <li>
+                    <div class="description">
+                        <p>Faculty members can log in to the portal for teaching and administrative tasks.</p>
+                    </div>
+                    <img src="images/faculty_portal.jfif" alt="Link 2 Image">
+                    <a href="#">Faculty Portal</a>
+                </li>
+                <li>
+                    <img src="images/study_material.jfif" alt="Link 3 Image">
+                    <div class="description">
+                        <p>Explore available courses and curriculum details.</p>
+                    </div>
+                    
+                    <a href="http://ifetinfosys.ifet.ac.in/ERPStud/Default.aspx">Study Materials</a>
+                </li>
+                <li>
+                    <div class="description">
+                        <p>Stay updated on upcoming college events and activities.</p>
+                    </div>
+                    <img src="images/library.jfif" alt="Link 4 Image">
+                    <a href="https://ifet.ac.in/DIGITAL%20LIBRARY.html">Central Library</a>
+                </li>
+                <li>
+                    <img src="link5-image.jpg" alt="Link 5 Image">
+                    <div class="description">
+                        <p>Access the library catalog and resources.</p>
+                    </div>
+                    
+                    <a href="#">Library</a>
+                </li>
+                <li>
+                    <div class="description">
+                        <p>Contact the college administration for inquiries and support.</p>
+                    </div>
+                    <img src="link6-image.jpg" alt="Link 6 Image">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <footer>
+        &copy; 2023 College ERP
+    </footer>
+
+    <script>
+        // JavaScript for image slider
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slider img');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        showSlides(); // Initial call to start the slider
+    </script>
+</body>
+</html>
