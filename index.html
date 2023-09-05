@@ -23,6 +23,32 @@
             background-color: #031242;
             color: #fff;
             text-align: center;
+            position: relative;
+            padding: 20px 0; /* Added padding for spacing */
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            overflow: hidden;
+            background-color: #031242;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: red;
         }
 
         /* Style the slider section */
@@ -37,6 +63,36 @@
             height: auto;
             display: none;
         }
+
+        /* Style the noticeboard section */
+        .noticeboard {
+            background-color: #031242;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .noticeboard .scrolling-news {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .noticeboard .scrolling-news span {
+            display: inline-block;
+            padding-right: 10px;
+            animation: marquee 15s linear infinite;
+        }
+
+        /* Add keyframes for the marquee animation */
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
 
         /* Style the main content section */
         .container {
@@ -65,17 +121,64 @@
             padding: 20px;
         }
 
-        /* Style the slider section */
-        .slider {
-            position: relative;
-            max-width: 100%;
-            overflow: hidden;
+       /* Add your CSS styles here */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider img {
+    max-width: 100%; /* Set the maximum width to 100% */
+    max-height: 300px; /* Set the maximum height as needed */
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
         }
 
-        .slider img {
-            width: 100%;
-            height: auto;
-            display: none;
+        .arrow-left {
+            left: 0;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #555;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #fff;
         }
 
         /* Style the links section */
@@ -145,13 +248,52 @@
 </head>
 <body>
     <header>
-        <img src="images/head04.jpg" alt="College ERP Logo" style="max-width: 100%;">
+        <img src="images/head05.jpg" alt="IFET Background png" width="500" height="100">
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Gallery</a>
+            <a href="#">Placement Cell</a>
+            <a href="#">Contact</a>
+        </div>
+        
     </header>
 
-    <div class="slider">
-        <img src="images/image03.jpg" alt="Image 1">
-        <img src="images/image01.jpg" alt="Image 2">
+    <h1>DIGITAL NOTICEBOARD</h1>
 
+    <h4 style="text-align: center;">UPCOMING EVENTS</h4>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="images/E01.jpg" alt="Image 1">
+            <img src="images/E02.jpg" alt="Image 2">
+            <!-- Add more images as needed -->
+        </div>
+        <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+    </div>
+    <div class="dots">
+        <span class="dot" onclick="gotoSlide(0)"></span>
+        <span class="dot" onclick="gotoSlide(1)"></span>
+       
+        <!-- Add more dots as needed -->
+    </div>
+    
+    <h4 style="text-align: center;">UPCOMING LECTURES</h4>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="images/L01.jpg" alt="Image 1">
+            <img src="images/L02.jpg" alt="Image 2">
+            <img src="images/L03.jpg" alt="Image 2">
+            <!-- Add more images as needed -->
+        </div>
+        <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
+        <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+    </div>
+    <div class="dots">
+        <span class="dot" onclick="gotoSlide(0)"></span>
+        <span class="dot" onclick="gotoSlide(1)"></span>
+        <span class="dot" onclick="gotoSlide(2)"></span>
+        <!-- Add more dots as needed -->
     </div>
     <marquee style="margin-top:15px; padding:8px; background-color:#ff4200;">
 					
@@ -241,23 +383,50 @@
     </footer>
 
     <script>
-        // JavaScript for image slider
-        let slideIndex = 0;
+        // JavaScript for slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const dots = document.querySelectorAll('.dot');
 
-        function showSlides() {
-            const slides = document.querySelectorAll('.slider img');
+        function showSlide(index) {
+            if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentSlide = 0;
+            }
+
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = 'none';
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
+
+            slides[currentSlide].style.display = 'block';
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
             }
-            slides[slideIndex - 1].style.display = 'block';
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
+
+            dots[currentSlide].classList.add('active');
         }
 
-        showSlides(); // Initial call to start the slider
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        function gotoSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+
+        // Automatic slide change
+        setInterval(nextSlide, 4000);
     </script>
 </body>
 </html>
