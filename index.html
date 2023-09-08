@@ -41,6 +41,7 @@
             padding: 14px 16px;
             text-decoration: none;
         }
+
         h1 {
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
@@ -52,97 +53,28 @@
         }
 
         /* Style the slider section */
-        .slider {
+        .slider-container {
             position: relative;
             max-width: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .slider img {
-            width: 100%;
-            height: auto;
-            display: none;
-        }
-
-        /* Style the noticeboard section */
-        .noticeboard {
-            background-color: #031242;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .noticeboard .scrolling-news {
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .noticeboard .scrolling-news span {
-            display: inline-block;
-            padding-right: 10px;
-            animation: marquee 15s linear infinite;
-        }
-
-        /* Add keyframes for the marquee animation */
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-
-        /* Style the main content section */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Style the slider section */
         .slider {
-            position: relative;
-            max-width: 100%;
-            overflow: hidden;
+            display: flex;
+            transition: transform 0.3s ease-in-out;
         }
 
         .slider img {
-            width: 100%;
+            max-width: 100%;
+            max-height: 300px;
+            width: auto;
             height: auto;
-            display: none;
+            align-items: center;
+            justify-content: center;
         }
-
-        /* Style the main content section */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-       /* Add your CSS styles here */
-.slider-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
-.slider img {
-    max-width: 100%; /* Set the maximum width to 100% */
-    max-height: 300px; /* Set the maximum height as needed */
-    width: auto;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-}
 
         .arrow {
             position: absolute;
@@ -179,6 +111,42 @@
 
         .dot.active {
             background-color: #fff;
+        }
+
+        /* Style the noticeboard section */
+        .noticeboard {
+            background-color: #031242;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .noticeboard .scrolling-news {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .noticeboard .scrolling-news span {
+            display: inline-block;
+            padding-right: 10px;
+            animation: marquee 15s linear infinite;
+        }
+
+        /* Add keyframes for the marquee animation */
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Style the main content section */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         /* Style the links section */
@@ -244,6 +212,32 @@
             text-align: center;
             padding: 10px 0;
         }
+
+        /* Social media icons */
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-media a:hover {
+            color: red;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .slider img {
+                max-height: 200px; /* Adjust the maximum height for smaller screens */
+            }
+
+            .slider-container {
+                flex-direction: column; /* Stack sliders vertically on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -256,7 +250,6 @@
             <a href="#">Placement Cell</a>
             <a href="#">Contact</a>
         </div>
-        
     </header>
 
     <h1>DIGITAL NOTICEBOARD</h1>
@@ -274,10 +267,9 @@
     <div class="dots">
         <span class="dot" onclick="gotoSlide(0)"></span>
         <span class="dot" onclick="gotoSlide(1)"></span>
-       
         <!-- Add more dots as needed -->
     </div>
-    
+
     <h4 style="text-align: center;">UPCOMING LECTURES</h4>
     <div class="slider-container">
         <div class="slider">
@@ -296,30 +288,8 @@
         <!-- Add more dots as needed -->
     </div>
     <marquee style="margin-top:15px; padding:8px; background-color:#ff4200;">
-					
-        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
-        <span><img src="images/;">&nbsp; <a href="http://results.ifet.ac.in/" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG/PG - Nov/Dec 2022 - End Semester Examinations Results (First Semester)</a></span>
-        </div>
-                
-        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
-        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="http://results.ifet.ac.in/" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG/PG - April/May 2023 - End Semester Examinations Results (Terminal Semester)</a></span>
-        </div>
-                
-        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
-        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/timetable/Time Table 2023 - UG (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG - April/May - 2023 - Examination Time Table - (First Year Regular &amp; Arrear) R2019 </a></span>
-        </div>
-                
-        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
-        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/Coe/Time Table 2023 - ME (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">PG - April/May – 2023 - M.E./M.Tech.  Degree Examination Time Table – . R2019</a></span>
-        </div>
-                
-        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
-        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/Coe/Time Table 2023 - MBA (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">PG - April/May – 2023 - MBA. Degree Examination Time Table –R2019</a></span>
-        </div>
-                        <!--<div style="float:left;margin-right:30px;">
-        <span><img src="images/new.gif" style="float:left;"/>&nbsp; <a style="color:#031242;font-size:16px;font-weight:600;">Admission Open For The Batch 2019-2020.</a></span>
-        </div>-->
-        </marquee>
+        <!-- Your marquee content goes here -->
+    </marquee>
 
     <div class="container">
         <h2>Quick Links</h2>
@@ -333,7 +303,6 @@
                         <p>You can access,</p>
                         <p>You can access,</p>
                     </div>
-                    
                     <a href="https://ssolive.myclassboard.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DDIL4KLQ05IV1JZOXCLM0%26redirect_uri%3Dhttps%253A%252F%252Ficici.myclassboard.com%252Fsso%252FCallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520offline_access" >Student Portal</a>
                 </li>
                 <li>
@@ -348,7 +317,6 @@
                     <div class="description">
                         <p>Explore available courses and curriculum details.</p>
                     </div>
-                    
                     <a href="http://ifetinfosys.ifet.ac.in/ERPStud/Default.aspx">Study Materials</a>
                 </li>
                 <li>
@@ -363,7 +331,6 @@
                     <div class="description">
                         <p>Access the library catalog and resources.</p>
                     </div>
-                    
                     <a href="#">Library</a>
                 </li>
                 <li>
@@ -377,56 +344,64 @@
         </div>
     </div>
 
-
     <footer>
         &copy; 2023 College ERP
+        <div class="social-media">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        </div>
     </footer>
 
     <script>
         // JavaScript for slider
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slider img');
-        const dots = document.querySelectorAll('.dot');
+        let currentSlide1 = 0;
+        let currentSlide2 = 0;
+        const slides1 = document.querySelectorAll('.slider')[0].querySelectorAll('img');
+        const slides2 = document.querySelectorAll('.slider')[1].querySelectorAll('img');
+        const dots1 = document.querySelectorAll('.dot')[0];
+        const dots2 = document.querySelectorAll('.dot')[1];
 
-        function showSlide(index) {
+        function showSlide1(index) {
             if (index < 0) {
-                currentSlide = slides.length - 1;
-            } else if (index >= slides.length) {
-                currentSlide = 0;
+                currentSlide1 = slides1.length - 1;
+            } else if (index >= slides1.length) {
+                currentSlide1 = 0;
             }
 
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
+            for (let i = 0; i < slides1.length; i++) {
+                slides1[i].style.display = 'none';
             }
 
-            slides[currentSlide].style.display = 'block';
+            slides1[currentSlide1].style.display = 'block';
+            dots1.classList.remove('active');
+            dots1.classList.add('active');
 
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove('active');
+            currentSlide1++;
+            setTimeout(() => showSlide1(currentSlide1), 4000);
+        }
+
+        function showSlide2(index) {
+            if (index < 0) {
+                currentSlide2 = slides2.length - 1;
+            } else if (index >= slides2.length) {
+                currentSlide2 = 0;
             }
 
-            dots[currentSlide].classList.add('active');
+            for (let i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = 'none';
+            }
+
+            slides2[currentSlide2].style.display = 'block';
+            dots2.classList.remove('active');
+            dots2.classList.add('active');
+
+            currentSlide2++;
+            setTimeout(() => showSlide2(currentSlide2), 4000);
         }
 
-        function nextSlide() {
-            currentSlide++;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide--;
-            showSlide(currentSlide);
-        }
-
-        function gotoSlide(index) {
-            currentSlide = index;
-            showSlide(currentSlide);
-        }
-
-        showSlide(currentSlide);
-
-        // Automatic slide change
-        setInterval(nextSlide, 4000);
+        showSlide1(currentSlide1);
+        showSlide2(currentSlide2);
     </script>
 </body>
 </html>
