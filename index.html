@@ -237,12 +237,51 @@
             .slider-container {
                 flex-direction: column; /* Stack sliders vertically on smaller screens */
             }
+
+            header img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        hr.rounded {
+            border-top: 8px solid #bbb;
+            border-radius: 5px;
+          }
+          /* Styles for the FAB container */
+        .fab-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff; /* Change the background color as needed */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none; /* Remove the default underlining of anchor links */
+        }
+
+        /* Styles for the FAB icon (you can use an icon font or an image here) */
+        .fab-icon {
+            color: #fff; /* Change the icon color as needed */
+            font-size: 24px;
+        }
+
+        /* Styles for the text above the FAB */
+        .fab-text {
+            text-align: center;
+            color: #333; /* Change the text color as needed */
+            font-size: 14px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="images/head05.jpg" alt="IFET Background png" width="500" height="100">
+        <img src="images/head05.jpg" alt="IFET Background png">
         <div class="navbar">
             <a href="#">Home</a>
             <a href="about.html">About</a>
@@ -251,15 +290,15 @@
             <a href="#">Contact</a>
         </div>
     </header>
-
+    <hr class="rounded">
     <h1>DIGITAL NOTICEBOARD</h1>
 
     <h4 style="text-align: center;">UPCOMING EVENTS</h4>
     <div class="slider-container">
         <div class="slider">
-            <img src="images/E01.jpg" alt="Image 1">
-            <img src="images/E02.jpg" alt="Image 2">
-            <!-- Add more images as needed -->
+            <a href="registration1.html"><img src="images/E01.jpg" alt="Image 1"></a>
+            <a href="registration2.html"><img src="images/E02.jpg" alt="Image 2"></a>
+            <!-- Add more images as needed with registration links -->
         </div>
         <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
         <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
@@ -269,14 +308,14 @@
         <span class="dot" onclick="gotoSlide(1)"></span>
         <!-- Add more dots as needed -->
     </div>
-
+    <marquee>Click the image for registeration</marquee>
     <h4 style="text-align: center;">UPCOMING LECTURES</h4>
     <div class="slider-container">
         <div class="slider">
-            <img src="images/L01.jpg" alt="Image 1">
-            <img src="images/L02.jpg" alt="Image 2">
-            <img src="images/L03.jpg" alt="Image 2">
-            <!-- Add more images as needed -->
+            <a href="registration3.html"><img src="images/L01.jpg" alt="Image 1"></a>
+            <a href="registration4.html"><img src="images/L02.jpg" alt="Image 2"></a>
+            <a href="registration5.html"><img src="images/L03.jpg" alt="Image 3"></a>
+            <!-- Add more images as needed with registration links -->
         </div>
         <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
         <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
@@ -287,10 +326,39 @@
         <span class="dot" onclick="gotoSlide(2)"></span>
         <!-- Add more dots as needed -->
     </div>
-    <marquee style="margin-top:15px; padding:8px; background-color:#ff4200;">
-        <!-- Your marquee content goes here -->
-    </marquee>
+    <hr class="rounded">
+    <h1>EXAM RESULTS</h1>
 
+    <marquee style="margin-top:15px; padding:8px; background-color:#ff4200;">
+					
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="http://results.ifet.ac.in/" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG/PG - Nov/Dec 2022 - End Semester Examinations Results (First Semester)</a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="http://results.ifet.ac.in/" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG/PG - April/May 2023 - End Semester Examinations Results (Terminal Semester)</a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/timetable/Time Table 2023 - UG (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">UG - April/May - 2023 - Examination Time Table - (First Year Regular &amp; Arrear) R2019 </a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/Coe/Time Table 2023 - ME (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">PG - April/May – 2023 - M.E./M.Tech.  Degree Examination Time Table – . R2019</a></span>
+        </div>
+                
+        <div class="scrolling_news" style="margin-right:30px;display:inline-block;">
+        <span><img src="images/new.gif" style="float:left;">&nbsp; <a href="https://ifet.ac.in/images/Coe/Time Table 2023 - MBA (First Year Regular &amp; Arrear).pdf" target="_blank" style="color:#fff;font-size:15px;font-weight:500;">PG - April/May – 2023 - MBA. Degree Examination Time Table –R2019</a></span>
+        </div>
+                        <!--<div style="float:left;margin-right:30px;">
+        <span><img src="images/new.gif" style="float:left;"/>&nbsp; <a style="color:#031242;font-size:16px;font-weight:600;">Admission Open For The Batch 2019-2020.</a></span>
+        </div>-->
+        </marquee>
+        <a href="http://results.ifet.ac.in/" class="float2" target="_blank">
+            <h4 class="my-float2" style="font-size:20px;"> <i class="fa fa-hand-o-right" style="color:#fff;"></i> <b>UG/PG - April/May 2023 <br>End Semester Examinations Results (Except 1st Year)</b></h4>
+        </a>
+        
+        <hr class="rounded">
     <div class="container">
         <h2>Quick Links</h2>
         <div class="links">
@@ -345,7 +413,7 @@
     </div>
 
     <footer>
-        &copy; 2023 College ERP
+        IFETCE &copy; 2023 College ERP
         <div class="social-media">
             <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
