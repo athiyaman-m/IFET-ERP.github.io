@@ -61,6 +61,25 @@
             line-height: 1.5;
         }
 
+        /* Style the event image */
+        .event-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Style the registration link */
+        .registration-link {
+            display: block;
+            text-align: center;
+            background-color: #031242;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
         /* Responsive styles */
         @media screen and (max-width: 768px) {
             .container {
@@ -80,18 +99,24 @@
 
     <div class="container">
         <div class="event">
-            <h2>Event Title 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget dignissim libero. Vestibulum at vehicula odio. Proin vel justo vel metus convallis tristique.</p>
+            <h2>#IFET03 - ENGINEER'S DAY CELEBRATION!</h2>
+            <img class="event-image" src="images/event03.jpeg" alt="Event 1 Image">
+            <p>Last Date : 13/09/2023</p>
+            <a class="registration-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeXSbG5wHQ2Ce4VD3w9CO8zXzvjgR0jjSl2iMO4e2lY_Gk96w/viewform">Click here to register</a>
         </div>
 
         <div class="event">
-            <h2>Event Title 2</h2>
-            <p>Integer in condimentum ante. Suspendisse luctus metus nec ex consequat, id aliquam neque luctus. Phasellus et ipsum ut libero lacinia fermentum ac a arcu.</p>
+            <h2>#IFET02 - LITERACY DAY!</h2>
+            <img class="event-image" src="images/event02.jpeg" alt="Event 2 Image">
+            <p>Last Date : 07/09/2023</p>
+            <a class="registration-link" href="#">Registration Closed!</a>
         </div>
 
         <div class="event">
-            <h2>Event Title 3</h2>
+            <h2>#IFET01 - SMALL INDUSTRY DAY!</h2>
+            <img class="event-image" src="images/event01.jpeg" alt="Event 3 Image">
             <p>Vestibulum id mi vitae nibh ullamcorper facilisis. Morbi nec nunc non purus laoreet tempus. Duis efficitur, nisl eu fermentum malesuada.</p>
+            <a class="registration-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfMjHXFztT33oMgF_817Yh58NXSaIav8I9wurClFWrVj0T3fA/viewform">Registration Closed!</a>
         </div>
         <!-- Add more events/news items as needed -->
     </div>
