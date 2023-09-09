@@ -24,7 +24,7 @@
             color: #fff;
             text-align: center;
             position: relative;
-            padding: 20px 0; /* Added padding for spacing */
+            padding: 0px 0; /* Added padding for spacing */
         }
 
         /* Navigation bar styles */
@@ -64,7 +64,7 @@
 
         .slider {
             display: flex;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.2s ease-in-out;
         }
 
         .slider img {
@@ -110,7 +110,7 @@
         }
 
         .dot.active {
-            background-color: #fff;
+            background-color: #555;
         }
 
         /* Style the noticeboard section */
@@ -285,6 +285,7 @@
         <div class="navbar" style="text-align: center;">
             <a href="index.html">Home</a>
             <a href="events.html">Events</a>
+            <a href="events.html">Lectures / seminars</a>
             <a href="https://ifet.ac.in/about-us.php">About</a>
         </div>
     </header>
@@ -294,8 +295,9 @@
     <h4 style="text-align: center;">UPCOMING EVENTS</h4>
     <div class="slider-container">
         <div class="slider">
-            <a href="registration1.html"><img src="images/E01.jpg" alt="Image 1"></a>
-            <a href="registration2.html"><img src="images/E02.jpg" alt="Image 2"></a>
+            <a href="events.html"><img src="images/event03.jpeg" alt="Image 1"></a>
+            <a href="events.html"><img src="images/event02.jpeg" alt="Image 2"></a>
+            <a href="events.html"><img src="images/event01.jpeg" alt="Image 2"></a>
             <!-- Add more images as needed with registration links -->
         </div>
         <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
@@ -304,15 +306,17 @@
     <div class="dots">
         <span class="dot" onclick="gotoSlide(0)"></span>
         <span class="dot" onclick="gotoSlide(1)"></span>
+        <span class="dot" onclick="gotoSlide(1)"></span>
         <!-- Add more dots as needed -->
     </div>
-    <marquee>Click the image for registeration</marquee>
+    <p style="text-align: center;">"Click the above images for registeration"</p>
+    
     <h4 style="text-align: center;">UPCOMING LECTURES</h4>
     <div class="slider-container">
         <div class="slider">
-            <a href="registration3.html"><img src="images/L01.jpg" alt="Image 1"></a>
-            <a href="registration4.html"><img src="images/L02.jpg" alt="Image 2"></a>
-            <a href="registration5.html"><img src="images/L03.jpg" alt="Image 3"></a>
+            <a href="lecture.html"><img src="images/L01.jpg" alt="Image 1"></a>
+            <a href="lecture.html"><img src="images/L02.jpg" alt="Image 2"></a>
+            <a href="lecture.html"><img src="images/L03.jpg" alt="Image 3"></a>
             <!-- Add more images as needed with registration links -->
         </div>
         <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
@@ -324,6 +328,8 @@
         <span class="dot" onclick="gotoSlide(2)"></span>
         <!-- Add more dots as needed -->
     </div>
+
+    
     <hr class="rounded">
     <h1>EXAM RESULTS</h1>
 
