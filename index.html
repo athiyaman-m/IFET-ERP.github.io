@@ -294,7 +294,20 @@
 }
 /* CSS to change bullet point style */
 /* CSS to change bullet point style */
+    /* Default styles for the iframe */
+    iframe {
+        width: 100%; /* Make the iframe take up the full width of its container */
+        max-width: 420px; /* Limit the maximum width for larger screens */
+        height: 500px;
+    }
 
+    /* Media query for screens smaller than 420px */
+    @media (max-width: 420px) {
+        iframe {
+            width: 100%; /* Make the iframe take up the full width of the screen */
+            height: 300px; /* Adjust the height as needed for smaller screens */
+        }
+    }
 
     </style>
 </head>
@@ -490,7 +503,7 @@
         <br>
         <h2 style="text-align: center;">Any quaries? Chat now!</h3>
             <br>
-        <iframe width="420" height="500" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/0b1a1d60-217a-4a81-9ff8-ac4bb6f5ae7f"></iframe>
+            <iframe allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/0b1a1d60-217a-4a81-9ff8-ac4bb6f5ae7f"></iframe>
     <footer>
         IFETCE &copy; 2023 College ERP
         <div class="social-media">
