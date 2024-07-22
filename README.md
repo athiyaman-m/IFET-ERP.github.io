@@ -1,4 +1,4 @@
-# College Management Website
+# College Management WebApp
 
 ## Project Overview
 
